@@ -1,9 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+/**
+ * Copyright (c) 2020 developer.martinhwang@gmail.com
+ * All rights reserved.
+ *
+ * Filename: App.js
+ *
+ * Key Options:
+ * - main component which acts a container for all other components
+ *
+ * Revision History:
+ * - Dec 14, 2020, Martin Hwang <developer.martinhwang@gmail.com> : Created
+ */
+import React from 'react'
+// react native
+import { StyleSheet, Text, View } from 'react-native'
+
 import { Authenticator } from 'aws-amplify-react-native'
+// aws amplify
 import Amplify from 'aws-amplify'
 import awsExports from './aws-exports'
+import { StatusBar } from 'expo-status-bar'
 Amplify.configure(awsExports)
 function Home(props) {
     let state = ""
@@ -19,7 +34,7 @@ export default function App() {
       <Authenticator usernameAttributes="email">
         <Home/>
       </Authenticator>
-      {/*<StatusBar style="auto" />*/}
+      <StatusBar style="auto" />
     </View>
   );
 }
