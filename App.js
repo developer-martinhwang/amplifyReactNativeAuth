@@ -31,7 +31,7 @@ function Home(props) {
 export default function App() {
   return (
     <View style={styles.container}>
-      <Authenticator usernameAttributes="email">
+      <Authenticator usernameAttributes="email" hideDefault={true}>
         <Home/>
       </Authenticator>
       <StatusBar style="auto" />
